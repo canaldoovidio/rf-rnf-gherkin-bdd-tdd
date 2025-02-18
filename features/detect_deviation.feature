@@ -1,13 +1,15 @@
-Feature: Detecção de Desvio de Rota
+# language: pt
+
+Funcionalidade: Detecção de Desvio de Rota
   Como um sistema de monitoramento de rotas
   Quero analisar as coordenadas recebidas periodicamente
   Para detectar desvios maiores que 6 km em 3 atualizações consecutivas
 
-  Background:
+  Contexto:
     Dado que tenho um conjunto de rotas planejadas no sistema
     E cada rota possui coordenadas pré-definidas
 
-  Scenario: Caminhão desvia mais de 6 km por 3 atualizações consecutivas
+  Cenário: Caminhão desvia mais de 6 km por 3 atualizações consecutivas
     Dado que o caminhão "CX123" está em rota planejada
     Quando recebo 3 atualizações de localização com desvio de 7 km da rota
     Então devo registrar o desvio no DeviationRepository
