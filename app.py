@@ -89,12 +89,6 @@ def test_page():
     '''
     return render_template_string(html_content)
 
-from flask import Flask, jsonify, render_template_string
-import asyncio
-from src.services.retry_circuit_breaker import circuit_breaker_function
-
-app = Flask(__name__)
-
 @app.route("/circuit-breaker-example", methods=["GET"])
 async def circuit_breaker_example():
     try:
