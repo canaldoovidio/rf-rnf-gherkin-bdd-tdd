@@ -1,6 +1,6 @@
 # RF/RNF como Código — BDD, Gherkin e Táticas de Robustez
 
-Projeto de referência para a disciplina **Engenharia de Software (ES09)** do Inteli. Demonstra como aferir requisitos funcionais e não funcionais usando BDD (Behavior-Driven Development), testes unitários e testes de carga.
+Projeto de referência para a disciplina **Engenharia de Software (ES09)** turma 13 do Inteli. Demonstra como aferir requisitos funcionais e não funcionais usando BDD (Behavior-Driven Development), testes unitários e testes de carga.
 
 ## Stack
 
