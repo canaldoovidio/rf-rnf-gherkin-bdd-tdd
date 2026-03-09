@@ -1,0 +1,21 @@
+{
+  "name": "RF-RNF Gherkin BDD TDD",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.debugpy",
+        "alexkrechik.cucumberautocomplete"
+      ],
+      "settings": {
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": ["tests"],
+        "cucumberautocomplete.steps": ["features/steps/*.py"],
+        "cucumberautocomplete.syncfeatures": "features/*.feature"
+      }
+    }
+  },
+  "forwardPorts": [5000, 8089]
+}
