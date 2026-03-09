@@ -1,7 +1,7 @@
 {
   "name": "RF-RNF Gherkin BDD TDD",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
-  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+  "postCreateCommand": "python -m venv venv && . venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -10,6 +10,8 @@
         "alexkrechik.cucumberautocomplete"
       ],
       "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+        "python.terminal.activateEnvironment": true,
         "python.testing.pytestEnabled": true,
         "python.testing.pytestArgs": ["tests"],
         "cucumberautocomplete.steps": ["features/steps/*.py"],
